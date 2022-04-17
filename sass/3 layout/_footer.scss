@@ -1,0 +1,26 @@
+.footer{
+    background-color: $background-color--darker;
+    color: white;
+    padding: 10px 0 40px 20px;
+    & h1{
+        font-family: "Shrikhand", sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+    }
+    & ul{
+        padding: 0;
+        list-style: none;
+        & li{
+            margin-bottom: 5px;
+            & a{
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                & i{
+                    width: 25px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

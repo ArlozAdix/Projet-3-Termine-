@@ -1,0 +1,17 @@
+.header{
+    text-align: center;
+    padding: 20px 0 10px 0;
+    position: relative;
+        &__logo img{
+            width: 150px;
+        }
+        &__return{
+            position: absolute;
+            left: 5%;
+            top: 40%;
+            & i{
+                transform: scale(1.5);
+                color: black;
+            }
+        }
+}

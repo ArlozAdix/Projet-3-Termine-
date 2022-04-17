@@ -1,0 +1,91 @@
+.img_presentation{
+    background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    box-shadow: inset 0px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.menu{
+    transform: translateY(-100px);
+    background-color: $background-color--ligther;
+    border-radius: 30px 30px 0 0;
+    padding: 0 20px 0 20px;
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & h2{
+            font-family: Shrikhand, arial;
+        }
+        &__checkbox{
+            & input[type="checkbox"]{
+                display: none;
+            }
+            & input[type="checkbox"]:checked~i{
+                font-weight: 900;
+                background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
+                background-clip: text;
+                -webkit-background-clip:text;
+                color:transparent;
+                animation: checkbox_like 0.5s;
+            }
+            & i{
+                transform: scale(150%);
+            }
+        }
+    }
+
+    &__content{
+        &__title{
+            width: 40px;
+            height: 25px;
+            border-bottom: 3px solid $tertiary-color;        
+        }
+        &__dishe{
+            animation: menu_wrapper 1s;
+            animation-fill-mode: forwards;
+            &:nth-child(2){
+                animation-delay: 0.2s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.4s;
+            }
+            &:nth-child(4){
+                animation-delay: 0.6s;
+            }
+            &:nth-child(5){
+                animation-delay: 0.8s;
+            }
+            opacity: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 5px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 0 10px 0 10px;
+            font-size: 15px;
+            box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+            &__description{
+                & h3{
+                    font-size: 18px;
+                }
+             }
+             &__price{
+                font-weight: bold;
+            }
+         }
+    }
+    &__btn{
+        background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
+        border: none;
+        border-radius: 25px;
+        height: 50px;
+        width: 150px;
+        color: white;
+        font-family: Roboto, sans-serif;
+    }
+}
