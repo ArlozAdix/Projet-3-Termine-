@@ -576,6 +576,8 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 .explorer__btn {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border: none;
@@ -584,6 +586,14 @@ body h1, h2, h3, h4, h5, h6 {
   width: 200px;
   color: white;
   font-family: Roboto, sans-serif;
+}
+
+.explorer__btn:hover {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(360deg, #FF79DA 0%, #9356DC 100%);
+  font-size: 15px;
 }
 
 .functionning {

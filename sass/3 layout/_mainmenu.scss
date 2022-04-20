@@ -31,6 +31,7 @@
         width: 350px;
     }
     &__btn{
+        transition-duration: 0.2s;
         background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
         border: none;
         border-radius: 25px;
@@ -38,6 +39,11 @@
         width: 200px;
         color: white;
         font-family: Roboto, sans-serif;
+        &:hover{
+            transition-duration: 0.2s;
+            background: linear-gradient(360deg, $secondary-color 0%, $main-color 100%);
+            font-size: 15px;
+        }
     }
 }
 
