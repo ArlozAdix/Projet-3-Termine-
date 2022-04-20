@@ -19,22 +19,6 @@
         & h2{
             font-family: Shrikhand, arial;
         }
-        &__checkbox{
-            & input[type="checkbox"]{
-                display: none;
-            }
-            & input[type="checkbox"]:checked~i{
-                font-weight: 900;
-                background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
-                background-clip: text;
-                -webkit-background-clip:text;
-                color:transparent;
-                animation: checkbox_like 0.5s;
-            }
-            & i{
-                transform: scale(150%);
-            }
-        }
     }
 
     &__content{

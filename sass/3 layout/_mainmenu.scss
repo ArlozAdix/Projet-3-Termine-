@@ -118,28 +118,6 @@
                 height: 5px;
             }
         }
-        &__checkbox{
-            position: absolute;
-            right: 10%;
-            top: 80%;
-            & input[type="checkbox"]{
-                display: none;
-            }
-            & input[type="checkbox"]~i{
-                animation: checkbox_unlike 0.5s;
-            }
-            & input[type="checkbox"]:checked~i{
-                font-weight: 900;
-                background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
-                background-clip: text;
-                -webkit-background-clip:text;
-                color:transparent;
-                animation: checkbox_like 0.5s;
-            }
-            & i{
-                transform: scale(150%);
-            }
-        }
         &__new{
             padding: 0px 20px;
             line-height: 0px;

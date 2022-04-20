@@ -357,6 +357,62 @@ body h1, h2, h3, h4, h5, h6 {
   font-size: 26px;
 }
 
+.checkbox_heart--card {
+  position: absolute;
+  right: 10%;
+  top: 80%;
+}
+
+.checkbox_heart--card input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox_heart--card input[type="checkbox"] ~ i {
+  -webkit-animation: checkbox_unlike 0.5s;
+          animation: checkbox_unlike 0.5s;
+}
+
+.checkbox_heart--card input[type="checkbox"]:checked ~ i {
+  font-weight: 900;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation: checkbox_like 0.5s;
+          animation: checkbox_like 0.5s;
+}
+
+.checkbox_heart--card i {
+  -webkit-transform: scale(150%);
+          transform: scale(150%);
+}
+
+.checkbox_heart input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox_heart input[type="checkbox"] ~ i {
+  -webkit-animation: checkbox_unlike 0.5s;
+          animation: checkbox_unlike 0.5s;
+}
+
+.checkbox_heart input[type="checkbox"]:checked ~ i {
+  font-weight: 900;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation: checkbox_like 0.5s;
+          animation: checkbox_like 0.5s;
+}
+
+.checkbox_heart i {
+  -webkit-transform: scale(150%);
+          transform: scale(150%);
+}
+
 @-webkit-keyframes checkbox_like {
   0% {
     -webkit-transform: scale(1.5);
@@ -632,37 +688,6 @@ body h1, h2, h3, h4, h5, h6 {
   height: 5px;
 }
 
-.restaurant__card__checkbox {
-  position: absolute;
-  right: 10%;
-  top: 80%;
-}
-
-.restaurant__card__checkbox input[type="checkbox"] {
-  display: none;
-}
-
-.restaurant__card__checkbox input[type="checkbox"] ~ i {
-  -webkit-animation: checkbox_unlike 0.5s;
-          animation: checkbox_unlike 0.5s;
-}
-
-.restaurant__card__checkbox input[type="checkbox"]:checked ~ i {
-  font-weight: 900;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-animation: checkbox_like 0.5s;
-          animation: checkbox_like 0.5s;
-}
-
-.restaurant__card__checkbox i {
-  -webkit-transform: scale(150%);
-          transform: scale(150%);
-}
-
 .restaurant__card__new {
   padding: 0px 20px;
   line-height: 0px;
@@ -739,26 +764,6 @@ body h1, h2, h3, h4, h5, h6 {
 
 .menu__title h2 {
   font-family: Shrikhand, arial;
-}
-
-.menu__title__checkbox input[type="checkbox"] {
-  display: none;
-}
-
-.menu__title__checkbox input[type="checkbox"]:checked ~ i {
-  font-weight: 900;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-animation: checkbox_like 0.5s;
-          animation: checkbox_like 0.5s;
-}
-
-.menu__title__checkbox i {
-  -webkit-transform: scale(150%);
-          transform: scale(150%);
 }
 
 .menu__content__title {

@@ -1,0 +1,33 @@
+@import "./variable";
+
+
+@mixin mixin_checkbox_heart {
+    & input[type="checkbox"]{
+        display: none;
+    }
+    & input[type="checkbox"]~i{
+        animation: checkbox_unlike 0.5s;
+    }
+    & input[type="checkbox"]:checked~i{
+        font-weight: 900;
+        background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
+        background-clip: text;
+        -webkit-background-clip:text;
+        color:transparent;
+        animation: checkbox_like 0.5s;
+    }
+    & i{
+        transform: scale(150%);
+    }
+    
+}
+
+.checkbox_heart{
+    &--card{
+        position: absolute;
+        right: 10%;
+        top: 80%;
+        @include mixin_checkbox_heart();
+    }
+    @include mixin_checkbox_heart();
+}
