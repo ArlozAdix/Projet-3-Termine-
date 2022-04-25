@@ -35,3 +35,16 @@
     0%{ background-color: blue;
     }
 }
+
+@keyframes SliderAnim{
+    0%{
+    }
+
+    50%{
+        
+    }
+
+    100%{
+        width: 100px;
+    }
+}

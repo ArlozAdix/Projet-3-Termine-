@@ -505,6 +505,26 @@ body h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@-webkit-keyframes SliderAnim {
+  0% {
+  }
+  50% {
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes SliderAnim {
+  0% {
+  }
+  50% {
+  }
+  100% {
+    width: 100px;
+  }
+}
+
 .header {
   text-align: center;
   padding: 20px 0 10px 0;
@@ -742,6 +762,10 @@ body h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 
+#restaurant_page {
+  background-color: #f4f4f4;
+}
+
 .img_presentation {
   background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-position: center center;
@@ -752,15 +776,54 @@ body h1, h2, h3, h4, h5, h6 {
           box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-.menu {
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+.RestaurantName {
+  margin-top: -50px;
+  /* move on the background*/
   background-color: #f4f4f4;
   border-radius: 30px 30px 0 0;
-  padding: 0 20px 0 20px;
 }
 
-.menu__title {
+.RestaurantName__header {
+  /* Positioning title and heart */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.RestaurantName__header h2 {
+  /* Restaurant Name */
+  font-family: Shrikhand, arial;
+}
+
+.MenuBoard h2 {
+  /* Starter,dish,dessert*/
+  font-size: 19px;
+  font-weight: 400;
+  /*border creation*/
+  width: 40px;
+  height: 25px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.MenuBoard__Card {
+  /* Animation Wrapper */
+  -webkit-animation: menu_wrapper 1s;
+          animation: menu_wrapper 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  /* Card form */
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
+  padding: 0 0 0 10px;
+  /*positioning content*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,72 +833,70 @@ body h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 10px;
 }
 
-.menu__title h2 {
-  font-family: Shrikhand, arial;
-}
-
-.menu__content__title {
-  width: 40px;
-  height: 25px;
-  border-bottom: 3px solid #99E2D0;
-}
-
-.menu__content__dishe {
-  -webkit-animation: menu_wrapper 1s;
-          animation: menu_wrapper 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  line-height: 5px;
-  background-color: white;
-  border-radius: 15px;
-  padding: 0 10px 0 10px;
-  font-size: 15px;
-  -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
-}
-
-.menu__content__dishe:nth-child(2) {
+.MenuBoard__Card:nth-child(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-.menu__content__dishe:nth-child(3) {
+.MenuBoard__Card:nth-child(3) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.menu__content__dishe:nth-child(4) {
+.MenuBoard__Card:nth-child(4) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.menu__content__dishe:nth-child(5) {
+.MenuBoard__Card:nth-child(5) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.menu__content__dishe__description h3 {
-  font-size: 18px;
+.MenuBoard__Card h3, .MenuBoard__Card p {
+  /*margin corection for card description*/
+  margin: 0;
 }
 
-.menu__content__dishe__price {
-  font-weight: bold;
+.MenuBoard__Card > p {
+  /*Price alignement*/
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
 }
 
-.menu__btn {
+.MenuBoard__Card:hover .MenuBoard__Card__Slider {
+  /* Slider Animation */
+  -webkit-animation: SliderAnim 3s;
+          animation: SliderAnim 3s;
+}
+
+.MenuBoard__Card__Content {
+  /*Description form*/
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.MenuBoard__Card__Content h3, .MenuBoard__Card__Content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.MenuBoard__Card__Content h3 {
+  font-size: 17px;
+}
+
+.MenuBoard__Card__Slider {
+  /*Slider form*/
+  width: 0px;
+  height: 70px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+
+.CommandBtn {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border: none;

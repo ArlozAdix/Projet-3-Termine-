@@ -1,3 +1,7 @@
+ #restaurant_page{
+    background-color: $background-color--ligther;
+ }
+
 .img_presentation{
     background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
     background-position: center center;
@@ -7,69 +11,102 @@
     box-shadow: inset 0px 5px 10px 0px rgba(0,0,0,0.5);
 }
 
-.menu{
-    transform: translateY(-100px);
+.RestaurantName{
+    margin-top: -50px; /* move on the background*/
     background-color: $background-color--ligther;
     border-radius: 30px 30px 0 0;
-    padding: 0 20px 0 20px;
-    &__title{
+    &__header{ /* Positioning title and heart */
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        & h2{
+        & h2{ 
+            /* Restaurant Name */
             font-family: Shrikhand, arial;
         }
     }
+}
 
-    &__content{
-        &__title{
-            width: 40px;
-            height: 25px;
-            border-bottom: 3px solid $tertiary-color;        
+.MenuBoard{
+    &  h2{
+        /* Starter,dish,dessert*/
+        font-size: 19px;
+        font-weight: 400;
+         /*border creation*/
+        width: 40px;
+        height: 25px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+    &__Card{
+        /* Animation Wrapper */
+        animation: menu_wrapper 1s;
+        animation-fill-mode: forwards;
+        &:nth-child(2){
+            animation-delay: 0.2s;
         }
-        &__dishe{
-            animation: menu_wrapper 1s;
-            animation-fill-mode: forwards;
-            &:nth-child(2){
-                animation-delay: 0.2s;
+        &:nth-child(3){
+            animation-delay: 0.4s;
+        }
+        &:nth-child(4){
+            animation-delay: 0.6s;
+        }
+        &:nth-child(5){
+            animation-delay: 0.8s;
+        }
+        opacity: 0;
+        /* Card form */
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
+        padding: 0 0 0 10px;
+
+        /*positioning content*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        & h3, p{
+            /*margin corection for card description*/
+            margin: 0;
+        }
+        & > p{
+            /*Price alignement*/
+            transform: translateY(8px);
+        }
+        &:hover{
+            .MenuBoard__Card__Slider{
+                /* Slider Animation */
+                animation: SliderAnim 3s;
             }
-            &:nth-child(3){
-                animation-delay: 0.4s;
+        }
+        &__Content{
+            /*Description form*/
+            overflow: hidden;
+            white-space: nowrap;
+            & h3,p{
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
-            &:nth-child(4){
-                animation-delay: 0.6s;
+            & h3{
+                font-size: 17px;
             }
-            &:nth-child(5){
-                animation-delay: 0.8s;
-            }
-            opacity: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            line-height: 5px;
-            background-color: white;
-            border-radius: 15px;
-            padding: 0 10px 0 10px;
-            font-size: 15px;
-            box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
-            margin-bottom: 10px;
-            &__description{
-                & h3{
-                    font-size: 18px;
-                }
-             }
-             &__price{
-                font-weight: bold;
-            }
-         }
+        }
+        &__Slider{
+            /*Slider form*/
+            width: 0px;
+            height: 70px;
+            background-color: $tertiary-color;
+            border-radius: 0 15px 15px 0;
+        }
     }
-    &__btn{
-        background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
-        border: none;
-        border-radius: 25px;
-        height: 50px;
-        width: 150px;
-        color: white;
-        font-family: Roboto, sans-serif;
-    }
+}
+
+.CommandBtn{
+    background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 150px;
+    color: white;
+    font-family: Roboto, sans-serif;
 }

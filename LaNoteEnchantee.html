@@ -9,7 +9,7 @@
         <title>La Note Enchantée</title>
     </head>
 
-    <body>
+    <body id="restaurant_page">
         <header>
             <section class="header">
                 <div class="header__logo">
@@ -23,53 +23,35 @@
             <section class="img_presentation">
             </section>
 
-            <section class="menu">
-                <div class="menu__title">
+            <section class="RestaurantName">
+                <div class="RestaurantName__header">
                     <h2>La note enchantée</h2>
                     <label class="checkbox_heart">
                         <input type="checkbox" />
                         <i class="fa-regular fa-heart"></i>
                     </label>
                 </div>
-                <div class="menu__content">
-                    <p class="menu__content__title">ENTRÉES</p>
-
-                    <div class="menu__content__dishe">
-                        <div class="menu__content__dishe__description">
-                            <h3>Ravioles de foie gras</h3>
-                            <p>Accompagnés de leur crème à la truffe</p>
-                        </div>
-                        <p class="menu__content__dishe__price">25€</p>
-                    </div>
-
-                    <div class="menu__content__dishe">
-                        <div class="menu__content__dishe__description">
-                        <h3>Caviar osciètre</h3>
-                        <p>Sur blini à la farine noir</p>
-                        </div>
-                        <p class="menu__content__dishe__price">35€</p>
-                    </div>
-                    <div class="menu__content__dishe">
-                        <div class="menu__content__dishe__description">
-                        <h3>Homard et espuna de potiron</h3>
-                        <p>Mariné aux zestes d'orange</p>
-                        </div>
-                        <p class="menu__content__dishe__price">20€</p>
-                    </div>
-                    
-                    <div class="menu__content__dishe">
-                        <div class="menu__content__dishe__description">
-                        <h3>Foie gras de canard cuit entier</h3>
-                        <p>Confiture de figue et pain toasté</p>
-                        </div>
-                        <p class="menu__content__dishe__price">35€</p>
-                    </div>
-
-                </div>
-                <button class="menu__btn" type="button">
-                    Commander
-                </button>
             </section>
+
+                
+            <section class="MenuBoard">
+                <h2>ENTRÉES</h2>
+
+                <article class="MenuBoard__Card">
+                    <div class="MenuBoard__Card__Content">
+                        <h3>Ravioles de foie gras</h3>
+                        <p>Accompagnés de leur crème à la truffe</p>
+                    </div>
+                    <p>25€</p>
+                    <div class="MenuBoard__Card__Slider"></div>
+                </article>
+
+            </section>
+
+            <button class="CommandBtn" type="button">
+                Commander
+            </button>
+      
         </main>
 
         <footer>
