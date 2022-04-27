@@ -1,6 +1,10 @@
- #restaurant_page{
+#restaurant_page{
     background-color: $background-color--ligther;
- }
+}
+
+#restaurant_main{
+    position: relative;
+}
 
 .img_presentation{
     background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
@@ -52,7 +56,8 @@
         &:nth-child(5){
             animation-delay: 0.8s;
         }
-        opacity: 0;/* Checkbox setup */
+        opacity: 0;
+        /* Checkbox setup */
         & input[type="checkbox"]{
             display: none;
         }
@@ -71,13 +76,12 @@
         border-radius: 15px;
         box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
         padding: 0 0 0 10px;
-        margin: 0 0 10px 0;
+        margin: 0 10px 10px 10px;
 
         /*positioning content*/
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
 
         & h3, p{
             /*margin corection for card description*/
@@ -85,12 +89,15 @@
         }
         & > p{
             /*Price alignement*/
+            font-weight: bold;
             transform: translateY(8px);
+            padding: 0 10px 0 10px;
         }
         &__Content{
             /*Description form*/
             overflow: hidden;
             white-space: nowrap;
+            width: 100%;
             & h3,p{
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -124,13 +131,18 @@
         }
     }
 }
-
-.CommandBtn{
-    background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
-    border: none;
-    border-radius: 25px;
-    height: 50px;
-    width: 150px;
-    color: white;
-    font-family: Roboto, sans-serif;
+/* Order Button */
+.Command{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 50px 0;
+    &__Btn{
+        background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
+        border: none;
+        border-radius: 25px;
+        height: 50px;
+        width: 150px;
+        color: white;
+        font-family: Roboto, sans-serif;
+    }
 }

@@ -798,6 +798,10 @@ body h1, h2, h3, h4, h5, h6 {
   background-color: #f4f4f4;
 }
 
+#restaurant_main {
+  position: relative;
+}
+
 .img_presentation {
   background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-position: center center;
@@ -856,7 +860,7 @@ body h1, h2, h3, h4, h5, h6 {
   -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
   padding: 0 0 0 10px;
-  margin: 0 0 10px 0;
+  margin: 0 10px 10px 10px;
   /*positioning content*/
   display: -webkit-box;
   display: -ms-flexbox;
@@ -867,7 +871,6 @@ body h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
 }
 
 .MenuBoard__Card:nth-child(2) {
@@ -918,14 +921,17 @@ body h1, h2, h3, h4, h5, h6 {
 
 .MenuBoard__Card > p {
   /*Price alignement*/
+  font-weight: bold;
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
+  padding: 0 10px 0 10px;
 }
 
 .MenuBoard__Card__Content {
   /*Description form*/
   overflow: hidden;
   white-space: nowrap;
+  width: 100%;
 }
 
 .MenuBoard__Card__Content h3, .MenuBoard__Card__Content p {
@@ -967,7 +973,18 @@ body h1, h2, h3, h4, h5, h6 {
   background-color: white;
 }
 
-.CommandBtn {
+/* Order Button */
+.Command {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0 50px 0;
+}
+
+.Command__Btn {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border: none;
