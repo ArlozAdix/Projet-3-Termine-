@@ -40,11 +40,23 @@
     0%{
     }
 
-    50%{
-        
+    100%{
+            width: 70px;
+    }
+}
+@keyframes SpinAnim{
+    0%{
+
+    }
+    100%{
+        transform: rotateZ(360deg)
+    }
+}
+@keyframes SliderAnimBack{
+    0%{ width: 70px;
     }
 
     100%{
-        width: 100px;
+            width: 0px;
     }
 }

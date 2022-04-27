@@ -508,20 +508,52 @@ body h1, h2, h3, h4, h5, h6 {
 @-webkit-keyframes SliderAnim {
   0% {
   }
-  50% {
-  }
   100% {
-    width: 100px;
+    width: 70px;
   }
 }
 
 @keyframes SliderAnim {
   0% {
   }
-  50% {
+  100% {
+    width: 70px;
+  }
+}
+
+@-webkit-keyframes SpinAnim {
+  0% {
   }
   100% {
-    width: 100px;
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes SpinAnim {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes SliderAnimBack {
+  0% {
+    width: 70px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes SliderAnimBack {
+  0% {
+    width: 70px;
+  }
+  100% {
+    width: 0px;
   }
 }
 
@@ -817,12 +849,14 @@ body h1, h2, h3, h4, h5, h6 {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
+  /* Checkbox setup */
   /* Card form */
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.1);
   padding: 0 0 0 10px;
+  margin: 0 0 10px 0;
   /*positioning content*/
   display: -webkit-box;
   display: -ms-flexbox;
@@ -856,6 +890,27 @@ body h1, h2, h3, h4, h5, h6 {
           animation-delay: 0.8s;
 }
 
+.MenuBoard__Card input[type="checkbox"] {
+  display: none;
+}
+
+.MenuBoard__Card input[type=checkbox] ~ .MenuBoard__Card__Slider {
+  -webkit-animation: SliderAnimBack 0.5s;
+          animation: SliderAnimBack 0.5s;
+}
+
+.MenuBoard__Card input[type=checkbox]:checked ~ .MenuBoard__Card__Slider {
+  -webkit-animation: SliderAnim 1s;
+          animation: SliderAnim 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.MenuBoard__Card input[type=checkbox]:checked ~ .MenuBoard__Card__Slider i {
+  -webkit-animation: SpinAnim 1s;
+          animation: SpinAnim 1s;
+}
+
 .MenuBoard__Card h3, .MenuBoard__Card p {
   /*margin corection for card description*/
   margin: 0;
@@ -865,12 +920,6 @@ body h1, h2, h3, h4, h5, h6 {
   /*Price alignement*/
   -webkit-transform: translateY(8px);
           transform: translateY(8px);
-}
-
-.MenuBoard__Card:hover .MenuBoard__Card__Slider {
-  /* Slider Animation */
-  -webkit-animation: SliderAnim 3s;
-          animation: SliderAnim 3s;
 }
 
 .MenuBoard__Card__Content {
@@ -894,6 +943,28 @@ body h1, h2, h3, h4, h5, h6 {
   height: 70px;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.MenuBoard__Card__Slider i {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  color: #99E2D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: white;
 }
 
 .CommandBtn {

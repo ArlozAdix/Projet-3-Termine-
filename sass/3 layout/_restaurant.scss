@@ -52,12 +52,26 @@
         &:nth-child(5){
             animation-delay: 0.8s;
         }
-        opacity: 0;
+        opacity: 0;/* Checkbox setup */
+        & input[type="checkbox"]{
+            display: none;
+        }
+        & input[type=checkbox]~.MenuBoard__Card__Slider {
+            animation: SliderAnimBack 0.5s;
+        }
+        & input[type=checkbox]:checked~.MenuBoard__Card__Slider {
+            animation: SliderAnim 1s;
+            animation-fill-mode: forwards;
+            & i{
+                animation: SpinAnim 1s;
+            }
+        }
         /* Card form */
         background-color: white;
         border-radius: 15px;
         box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
         padding: 0 0 0 10px;
+        margin: 0 0 10px 0;
 
         /*positioning content*/
         display: flex;
@@ -72,12 +86,6 @@
         & > p{
             /*Price alignement*/
             transform: translateY(8px);
-        }
-        &:hover{
-            .MenuBoard__Card__Slider{
-                /* Slider Animation */
-                animation: SliderAnim 3s;
-            }
         }
         &__Content{
             /*Description form*/
@@ -97,6 +105,22 @@
             height: 70px;
             background-color: $tertiary-color;
             border-radius: 0 15px 15px 0;
+            position: relative;
+            overflow: hidden;
+            & i{
+                position: absolute;
+                top: 35%;
+                left: 35%;
+                color: $tertiary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                height: 25px;
+                border-radius: 25px;
+                background-color: white;
+
+            }
         }
     }
 }
