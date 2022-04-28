@@ -1,13 +1,24 @@
-#restaurant_page{
+.RestaurantBody{
     background-color: $background-color--ligther;
 }
 
-#restaurant_main{
-    position: relative;
+#PaletteGoutImg{
+    background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 
-.img_presentation{
+#NoteEnchanteeImg{
     background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+#FrancaiseImg{
+    background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+#DeliceSensImg{
+    background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+.RestaurantImg{
     background-position: center center;
     background-size: cover;
     width: 100%;
