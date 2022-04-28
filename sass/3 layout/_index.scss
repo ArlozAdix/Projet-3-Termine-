@@ -1,4 +1,40 @@
+#index{
+    position: relative;
+}
 
+
+.Loader{
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.644);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: LoaderFade 2s;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+    &__Spin{
+        width: 150px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 100%;
+        border: 10px solid #9356DC;
+        border-top:10px solid #99E2D0;
+        animation: SpinLoading 2s ease-in-out;
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        }
+        & > img{
+            position: absolute;
+            width: 80px;
+            pointer-events: none;
+    }
+}
 
 .localisation{
     height: 50px;

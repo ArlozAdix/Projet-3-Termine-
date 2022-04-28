@@ -60,3 +60,22 @@
             width: 0px;
     }
 }
+
+@keyframes SpinLoading{
+    0%{
+    }
+    90%{
+    }
+    100%{
+        transform: rotateZ(720deg);
+    }
+}
+
+@keyframes LoaderFade{
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
