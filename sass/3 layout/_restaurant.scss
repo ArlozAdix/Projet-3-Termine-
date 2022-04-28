@@ -148,6 +148,7 @@
     justify-content: center;
     padding: 50px 0 50px 0;
     &__Btn{
+        transition-duration: 0.2s;
         background: linear-gradient(180deg, $secondary-color 0%, $main-color 100%);
         border: none;
         border-radius: 25px;
@@ -155,5 +156,11 @@
         width: 150px;
         color: white;
         font-family: Roboto, sans-serif;
+        box-shadow: 3px 3px 20px 5px rgba(0,0,0,0.2);
+        &:hover{
+            transition-duration: 0.2s;
+            opacity: 0.8;
+            box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.2);
+        }
     }
 }

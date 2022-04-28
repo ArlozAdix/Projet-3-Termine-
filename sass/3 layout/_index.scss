@@ -75,10 +75,11 @@
         width: 200px;
         color: white;
         font-family: Roboto, sans-serif;
+        box-shadow: 3px 3px 20px 5px rgba(0,0,0,0.2);
         &:hover{
             transition-duration: 0.2s;
-            background: linear-gradient(360deg, $secondary-color 0%, $main-color 100%);
-            font-size: 15px;
+            opacity: 0.8;
+            box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.2);
         }
     }
 }

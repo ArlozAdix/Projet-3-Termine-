@@ -597,6 +597,22 @@ body h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@-webkit-keyframes BtnHover {
+  100% {
+    opacity: 0.8;
+    -webkit-box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes BtnHover {
+  100% {
+    opacity: 0.8;
+    -webkit-box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .header {
   text-align: center;
   padding: 20px 0 10px 0;
@@ -733,14 +749,16 @@ body h1, h2, h3, h4, h5, h6 {
   width: 200px;
   color: white;
   font-family: Roboto, sans-serif;
+  -webkit-box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.2);
 }
 
 .explorer__btn:hover {
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(360deg, #FF79DA 0%, #9356DC 100%);
-  font-size: 15px;
+  opacity: 0.8;
+  -webkit-box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .functionning {
@@ -1091,6 +1109,8 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 .Command__Btn {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   border: none;
@@ -1099,5 +1119,15 @@ body h1, h2, h3, h4, h5, h6 {
   width: 150px;
   color: white;
   font-family: Roboto, sans-serif;
+  -webkit-box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Command__Btn:hover {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  opacity: 0.8;
+  -webkit-box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=style.css.map */
