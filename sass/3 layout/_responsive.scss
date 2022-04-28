@@ -1,0 +1,53 @@
+@media screen and (min-width: 1170px){
+    #index{
+        
+        .explorer, .functionning{
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .explorer{
+            background-color: white;
+            &__text{
+                width: 100%;
+            }
+        }
+
+        .functionning{
+            & h2{
+                display: flex;
+                justify-content: center;
+            }
+            &__allstep{
+                display: flex;
+                justify-content: space-around;
+            }
+            &__step{
+                width: 280px;
+            }
+        }
+        .restaurant{
+            padding: 20px 10% 20px 10%;
+            &__allcard{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            &__card{
+                min-width: 400px;
+                width: 45%;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            & h2{
+                margin-left: 5%;
+            }
+        }
+        .footer ul{
+            display: flex;
+            justify-content: space-between;
+            width: 700px;
+        }
+    }
+
+}

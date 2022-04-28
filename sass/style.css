@@ -696,22 +696,16 @@ body h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 5px;
   -webkit-box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   position: relative;
-}
-
-.localisation__icone {
-  position: absolute;
-  left: 30%;
-}
-
-.localisation__text {
-  position: absolute;
-  left: 40%;
 }
 
 .explorer {
@@ -1129,5 +1123,67 @@ body h1, h2, h3, h4, h5, h6 {
   opacity: 0.8;
   -webkit-box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 1170px) {
+  #index .explorer, #index .functionning {
+    max-width: 80%;
+    margin: auto;
+  }
+  #index .explorer {
+    background-color: white;
+  }
+  #index .explorer__text {
+    width: 100%;
+  }
+  #index .functionning h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #index .functionning__allstep {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #index .functionning__step {
+    width: 280px;
+  }
+  #index .restaurant {
+    padding: 20px 10% 20px 10%;
+  }
+  #index .restaurant__allcard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #index .restaurant__card {
+    min-width: 400px;
+    width: 45%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #index .restaurant h2 {
+    margin-left: 5%;
+  }
+  #index .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 700px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

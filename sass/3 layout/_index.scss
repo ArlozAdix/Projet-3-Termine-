@@ -40,17 +40,11 @@
     height: 50px;
     background-color: $background-color;
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 5px;
     box-shadow: inset 0px 5px 10px 0px rgba(0,0,0,0.5);
     position: relative;
-        &__icone{
-            position: absolute;
-            left: 30%;
-        }
-        &__text{
-            position: absolute;
-            left: 40%;
-        }
 }
 
 .explorer{
