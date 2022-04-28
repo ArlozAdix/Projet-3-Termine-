@@ -1,4 +1,11 @@
 @media screen and (min-width: 1170px){
+    
+    .footer ul{
+        display: flex;
+        justify-content: space-between;
+        width: 700px;
+    }
+
     #index{
         
         .explorer, .functionning{
@@ -23,7 +30,7 @@
                 justify-content: space-around;
             }
             &__step{
-                width: 280px;
+                width: 320px;
             }
         }
         .restaurant{
@@ -43,11 +50,42 @@
                 margin-left: 5%;
             }
         }
-        .footer ul{
-            display: flex;
-            justify-content: space-between;
-            width: 700px;
-        }
     }
 
+    .RestaurantBody{
+        background-color: white;
+    }
+
+    .RestaurantImg{
+        height: 500px;
+    }
+    .RestaurantName, .MenuBoard, .Command{
+        width: 60%;
+        margin: auto;
+        background-color: $background-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .RestaurantName{
+        margin-top: -50px;
+        &__header{
+            gap: 200px;
+        }
+    }
+    .Command{
+        align-items: center;
+        border-radius: 0 0 30px 30px;
+        margin-bottom: 20px;
+    }
+    .MenuBoard{
+        &__Card{
+        min-width: 500px;
+        }
+        & h2{
+            margin-left: -40px;
+        }
+
+    }
 }

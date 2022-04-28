@@ -1126,6 +1126,15 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (min-width: 1170px) {
+  .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 700px;
+  }
   #index .explorer, #index .functionning {
     max-width: 80%;
     margin: auto;
@@ -1152,7 +1161,7 @@ body h1, h2, h3, h4, h5, h6 {
         justify-content: space-around;
   }
   #index .functionning__step {
-    width: 280px;
+    width: 320px;
   }
   #index .restaurant {
     padding: 20px 10% 20px 10%;
@@ -1176,14 +1185,48 @@ body h1, h2, h3, h4, h5, h6 {
   #index .restaurant h2 {
     margin-left: 5%;
   }
-  #index .footer ul {
+  .RestaurantBody {
+    background-color: white;
+  }
+  .RestaurantImg {
+    height: 500px;
+  }
+  .RestaurantName, .MenuBoard, .Command {
+    width: 60%;
+    margin: auto;
+    background-color: #ebebeb;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 700px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .RestaurantName {
+    margin-top: -50px;
+  }
+  .RestaurantName__header {
+    gap: 200px;
+  }
+  .Command {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 20px;
+  }
+  .MenuBoard__Card {
+    min-width: 500px;
+  }
+  .MenuBoard h2 {
+    margin-left: -40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
