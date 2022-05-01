@@ -1126,6 +1126,18 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (min-width: 1170px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
   .footer ul {
     display: -webkit-box;
     display: -ms-flexbox;
