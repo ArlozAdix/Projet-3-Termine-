@@ -1203,10 +1203,12 @@ body h1, h2, h3, h4, h5, h6 {
   .RestaurantImg {
     height: 500px;
   }
-  .RestaurantName, .MenuBoard, .Command {
-    width: 60%;
+  .RestaurantName, .MenuBoard, .Command, .FlexMenuBoard {
+    width: 90%;
     margin: auto;
     background-color: #ebebeb;
+  }
+  .MenuBoard, .Command {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1225,7 +1227,13 @@ body h1, h2, h3, h4, h5, h6 {
     margin-top: -50px;
   }
   .RestaurantName__header {
-    gap: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 20px 0 20px;
   }
   .Command {
     -webkit-box-align: center;
@@ -1234,8 +1242,13 @@ body h1, h2, h3, h4, h5, h6 {
     border-radius: 0 0 30px 30px;
     margin-bottom: 20px;
   }
+  .FlexMenuBoard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .MenuBoard__Card {
-    min-width: 500px;
+    width: 330px;
   }
   .MenuBoard h2 {
     margin-left: -40px;

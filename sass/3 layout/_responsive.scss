@@ -65,10 +65,12 @@
     .RestaurantImg{
         height: 500px;
     }
-    .RestaurantName, .MenuBoard, .Command{
-        width: 60%;
+    .RestaurantName, .MenuBoard, .Command,.FlexMenuBoard{
+        width: 90%;
         margin: auto;
         background-color: $background-color;
+    }
+    .MenuBoard, .Command{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -77,7 +79,9 @@
     .RestaurantName{
         margin-top: -50px;
         &__header{
-            gap: 200px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px 0 20px;
         }
     }
     .Command{
@@ -85,13 +89,17 @@
         border-radius: 0 0 30px 30px;
         margin-bottom: 20px;
     }
+    .FlexMenuBoard{
+        display: flex;
+        }
     .MenuBoard{
         &__Card{
-        min-width: 500px;
+            width: 330px;
         }
         & h2{
             margin-left: -40px;
         }
 
     }
+
 }
