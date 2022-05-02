@@ -505,22 +505,6 @@ body h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@-webkit-keyframes SliderAnim {
-  0% {
-  }
-  100% {
-    width: 70px;
-  }
-}
-
-@keyframes SliderAnim {
-  0% {
-  }
-  100% {
-    width: 70px;
-  }
-}
-
 @-webkit-keyframes SpinAnim {
   0% {
   }
@@ -536,24 +520,6 @@ body h1, h2, h3, h4, h5, h6 {
   100% {
     -webkit-transform: rotateZ(360deg);
             transform: rotateZ(360deg);
-  }
-}
-
-@-webkit-keyframes SliderAnimBack {
-  0% {
-    width: 70px;
-  }
-  100% {
-    width: 0px;
-  }
-}
-
-@keyframes SliderAnimBack {
-  0% {
-    width: 70px;
-  }
-  100% {
-    width: 0px;
   }
 }
 
@@ -971,7 +937,7 @@ body h1, h2, h3, h4, h5, h6 {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  /* Checkbox setup */
+  /* Animation setup */
   /* Card form */
   background-color: white;
   border-radius: 15px;
@@ -1011,23 +977,13 @@ body h1, h2, h3, h4, h5, h6 {
           animation-delay: 0.8s;
 }
 
-.MenuBoard__Card input[type="checkbox"] {
-  display: none;
+.MenuBoard__Card:hover .MenuBoard__Card__Slider {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  width: 70px;
 }
 
-.MenuBoard__Card input[type=checkbox] ~ .MenuBoard__Card__Slider {
-  -webkit-animation: SliderAnimBack 0.5s;
-          animation: SliderAnimBack 0.5s;
-}
-
-.MenuBoard__Card input[type=checkbox]:checked ~ .MenuBoard__Card__Slider {
-  -webkit-animation: SliderAnim 1s;
-          animation: SliderAnim 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.MenuBoard__Card input[type=checkbox]:checked ~ .MenuBoard__Card__Slider i {
+.MenuBoard__Card:hover .MenuBoard__Card__Slider i {
   -webkit-animation: SpinAnim 1s;
           animation: SpinAnim 1s;
 }
@@ -1063,6 +1019,8 @@ body h1, h2, h3, h4, h5, h6 {
 
 .MenuBoard__Card__Slider {
   /*Slider form*/
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   width: 0px;
   height: 70px;
   background-color: #99E2D0;
