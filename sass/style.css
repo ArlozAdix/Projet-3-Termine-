@@ -384,8 +384,8 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 .checkbox_heart--card i {
-  -webkit-transform: scale(150%);
-          transform: scale(150%);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .checkbox_heart input[type="checkbox"] {
@@ -409,8 +409,8 @@ body h1, h2, h3, h4, h5, h6 {
 }
 
 .checkbox_heart i {
-  -webkit-transform: scale(150%);
-          transform: scale(150%);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 @-webkit-keyframes checkbox_like {
