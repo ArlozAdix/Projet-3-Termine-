@@ -980,7 +980,7 @@ body h1, h2, h3, h4, h5, h6 {
 .MenuBoard__Card:hover .MenuBoard__Card__Slider {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
-  width: 70px;
+  width: 120px;
 }
 
 .MenuBoard__Card:hover .MenuBoard__Card__Slider i {
@@ -1031,8 +1031,11 @@ body h1, h2, h3, h4, h5, h6 {
 
 .MenuBoard__Card__Slider i {
   position: absolute;
-  top: 35%;
-  left: 35%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   color: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;

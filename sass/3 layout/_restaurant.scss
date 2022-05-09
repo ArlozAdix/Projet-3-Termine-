@@ -71,7 +71,7 @@
         &:hover{
             .MenuBoard__Card__Slider{
                 transition-duration: 1s;
-                width: 70px;
+                width: 120px;
                 & i{
                     animation: SpinAnim 1s;
                 }
@@ -123,8 +123,11 @@
             overflow: hidden;
             & i{
                 position: absolute;
-                top: 35%;
-                left: 35%;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
                 color: $tertiary-color;
                 display: flex;
                 justify-content: center;
